@@ -5,7 +5,7 @@ const initialState = {
   post: null,
 };
 
-export default function Posts (state = initialState ,action) {
+export default function posts (state = initialState ,action) {
   switch(action.type){
     case FETCH_POSTS:
       return { ...state,
