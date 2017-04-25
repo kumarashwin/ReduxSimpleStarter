@@ -1,4 +1,4 @@
-import { FETCH_POSTS } from '../actions/index'
+import { FETCH_POSTS, FETCH_POST } from '../actions/index'
 
 const initialState = {
   all: [],
@@ -10,6 +10,10 @@ export default function posts (state = initialState ,action) {
     case FETCH_POSTS:
       return { ...state,
         all: action.payload.data
+      };
+    case FETCH_POST:
+      return { ...state,
+        post: action.payload.data
       };
     default:
       return state;

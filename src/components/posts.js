@@ -11,8 +11,8 @@ class Posts extends Component {
 
   renderPosts = () => {
     return this.props.posts.map(post => (
-      <Link to={`posts/${post.id}`}>
-        <li className="list-group-item" key={post.id}>
+      <Link to={`posts/${post.id}`} key={post.id}>
+        <li className="list-group-item">
           <span className="pull-xs-right">{post.categories}</span>
           <strong>{post.title}</strong>
         </li>
